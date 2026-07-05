@@ -2,6 +2,10 @@
   'use strict';
   const blocksIcon = "https://cdn.phototourl.com/free/2026-07-05-db18e682-8ef5-4827-aee3-0030f7b5dad0.png"
   class Extension {
+    constructor() {
+      this.appol = "false";
+    }
+
     getInfo() {
       return {
         id: "applele",
@@ -14,7 +18,6 @@
         blocks: [
           {
             opcode: 'apple',
-            // fun fact:i love apples
             text: 'applele',
             blockType: Scratch.BlockType.COMMAND
           },
@@ -22,16 +25,39 @@
             opcode: 'report',
             text: 'this sprite is applele?',
             blockType: Scratch.BlockType.BOOLEAN
+          },
+          {
+            opcode: 'stt',
+            text: 'Become applele [APP]',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              APP: {
+                type: Scratch.ArgumentType.BOOLEAN
+              }
+            }
+          },
+          {
+            opcode: 'when',
+            text: 'When becomes applele',
+            blockType: Scratch.BlockType.EVENT,
+            isEdgeActivated: true
           }
         ]
       };
     }
     apple() {
-      alert("Applele")
-    
+      if (this.appol === "true") {
+        alert("Applele")
+      }
     }
     report() {
-      return true;
+      return this.appol;
+    }
+    stt(args) {
+      this.appol = args.APP === true ? "true" : "false";
+    }
+    when() {
+      return this.appol === "true";
     }
   }
   Scratch.extensions.register(new Extension());
