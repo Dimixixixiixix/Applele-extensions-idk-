@@ -13,13 +13,9 @@ coolicon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%; /* Optional: Adjust the size so it doesn't take the full screen width */
+  width: 50%;
 }
 
-}
-textbg {
-    background-color: #3f3f40;
-    padding: 20px; 
 }
 .box {
   background-color: #424240;
