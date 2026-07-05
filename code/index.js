@@ -63,7 +63,7 @@ function buildCard(ext) {
 
   card.querySelector(".btn-try").addEventListener("click", (e) => {
     const link = e.currentTarget.dataset.link;
-    /
+    
     window.open(`https://penguinmod.com/editor.html?extension=${encodeURIComponent(link)}`, "_blank");
   });
 
