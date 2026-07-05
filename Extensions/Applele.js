@@ -10,9 +10,11 @@ class Extension {
     color3: "#14c94e",
       // fun fact:i love apples
     blocks: [
+    {
       opcode: 'applele',
       text: 'applele',
       blockType: Scratch.BlockType.COMMAND
+      }
      ],
     };
   }
