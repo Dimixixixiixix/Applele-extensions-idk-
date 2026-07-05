@@ -57,7 +57,9 @@
       this.appol = args.APP === true ? "true" : "false";
     }
     when() {
+      if (this.appol === "true") {
       return this.appol === "true";
+      }
     }
   }
   Scratch.extensions.register(new Extension());
