@@ -1,5 +1,7 @@
 body {
   background-color: #19191a;
+  background-image: url('https://i.postimg.cc/Hn3BJXGr/Untitled-07-04-2026-03-30-58.png');
+  background-repeat: repeat; 
 }
 
 .apple {
@@ -11,10 +13,6 @@ body {
   background-color: #393a3b;
 }
 
-.coolicon {
-  width: 35%; 
-  background-repeat: repeat-x;
-}
 .notice {
   color: gray;
   font-size: 10px;
