@@ -23,5 +23,146 @@ body {
   font-family:arial;
 }
 
+.gallery-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.gallery-search {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.gallery-sort {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  font-size: 14px;
+}
+
+.extension-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.extension-card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.extension-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.extension-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f0f0f0;
+  display: block;
+}
+
+.extension-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.extension-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.extension-title .star {
+  color: #ffcc33;
+  font-size: 18px;
+}
+
+.extension-desc {
+  font-size: 14.5px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  flex: 1;
+}
+
+.extension-author {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 14px;
+}
+
+.extension-author a {
+  color: #1e88ff;
+  text-decoration: none;
+}
+
+.extension-author a:hover {
+  text-decoration: underline;
+}
+
+.extension-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-copy {
+  background: #1e90ff;
+}
+
+.btn-copy:hover {
+  background: #187fe0;
+}
+
+.btn-try {
+  background: #8c52ff;
+}
+
+.btn-try:hover {
+  background: #7a3ff0;
+}
+
+.gallery-empty {
+  text-align: center;
+  color: #888;
+  padding: 60px 20px;
+  font-size: 16px;
+}
+
 
 
