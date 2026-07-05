@@ -20,11 +20,12 @@ body {
 }
 .notice {
   color: darkgray;
-  font-size: 7px;
+  font-size: 10px;
   position: absolute; 
   bottom: 0;          
   left: 0;            
   margin: 0;        
+  font-family:arial;
 }
 
 
