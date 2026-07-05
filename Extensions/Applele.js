@@ -38,7 +38,7 @@
           {
             opcode: 'when',
             text: 'When becomes applele',
-            blockType: Scratch.BlockType.EVENT,
+            blockType: Scratch.BlockType.HAT,
             isEdgeActivated: true
           }
         ]
