@@ -1,5 +1,4 @@
 const GALLERY_JSON_PATH = "code/extensions.json";
-
 let allExtensions = [];
 
 async function loadExtensions() {
@@ -17,12 +16,10 @@ async function loadExtensions() {
 function renderGallery(list) {
   const grid = document.getElementById("extension-grid");
   grid.innerHTML = "";
-
   if (!list.length) {
     grid.innerHTML = `<div class="gallery-empty">No extensions found.</div>`;
     return;
   }
-
   for (const ext of list) {
     grid.appendChild(buildCard(ext));
   }
@@ -31,7 +28,6 @@ function renderGallery(list) {
 function buildCard(ext) {
   const card = document.createElement("div");
   card.className = "extension-card";
-
   card.innerHTML = `
     <img class="extension-thumb" src="${escapeHtml(ext.image || "")}" alt="${escapeHtml(ext.name)} thumbnail" loading="lazy">
     <div class="extension-body">
@@ -68,11 +64,12 @@ function buildCard(ext) {
       URL.revokeObjectURL(url);
       btn.textContent = "Downloaded!";
     } catch (err) {
-      // Some hosts block cross-origin fetch; fall back to just opening the file
       window.open(link, "_blank");
       btn.textContent = original;
     } finally {
-      setTimeout(() => (btn.textContent = original), 1500);
+      setTimeout(function () {
+        btn.textContent = original;
+      }, 1500);
     }
   });
 
@@ -81,7 +78,7 @@ function buildCard(ext) {
 
 function escapeHtml(str) {
   const div = document.createElement("div");
-  div.textContent = str ?? "";
+  div.textContent = str == null ? "" : str;
   return div.innerHTML;
 }
 
@@ -90,12 +87,13 @@ function wireSearch() {
   if (!input) return;
   input.addEventListener("input", () => {
     const q = input.value.trim().toLowerCase();
-    const filtered = allExtensions.filter(
-      (ext) =>
+    const filtered = allExtensions.filter(function (ext) {
+      return (
         ext.name.toLowerCase().includes(q) ||
         (ext.description || "").toLowerCase().includes(q) ||
         (ext.author || "").toLowerCase().includes(q)
-    );
+      );
+    });
     renderGallery(filtered);
   });
 }
