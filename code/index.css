@@ -1,6 +1,6 @@
 body {
   background-color: #19191a;
-  background-image: applele.jpeg;
+  background-image: url('applele.jpeg');
   background-repeat: repeat;
 }
 
