@@ -13,6 +13,7 @@ body {
 
 .coolicon {
   width: 35%; 
+  background-repeat: repeat-x;
 }
 .notice {
   color: gray;
