@@ -1,6 +1,6 @@
 (function(Scratch) {
   'use strict';
-  const blocksIcon = "https://cdn.phototourl.com/free/2026-07-05-db18e682-8ef5-4827-aee3-0030f7b5dad0.png"
+  const blocksIcon = "https://cdn.phototourl.com/free/2026-07-05-db18e682-8ef5-4827-aee3-0030f7b5dad0.png";
   class Extension {
     constructor() {
       this.appol = "false";
@@ -37,16 +37,21 @@
           },
           {
             opcode: 'when',
-            text: 'When becomes applele',
+            text: 'When becomes applele [YES]',
             blockType: Scratch.BlockType.HAT,
-            isEdgeActivated: true
+            isEdgeActivated: true,
+            arguments: {
+              YES: {
+                type: Scratch.ArgumentType.BOOLEAN
+              }
+            }
           }
         ]
       };
     }
     apple() {
       if (this.appol === "true") {
-        alert("Applele")
+        alert("Applele");
       }
     }
     report() {
@@ -55,8 +60,8 @@
     stt(args) {
       this.appol = args.APP === true ? "true" : "false";
     }
-    when() {
-      this.appol === "true";
+    when(args) {
+      return (this.appol === "true") === args.YES;
     }
   }
   Scratch.extensions.register(new Extension());
