@@ -18,6 +18,14 @@ body {
   width: 20%; 
   background-color: #393a3b;
 }
+.notice {
+  color: darkgray;
+  font-size: 7px;
+  position: absolute; /* Pulls the text out of normal document flow */
+  bottom: 0;          /* Aligns perfectly to the bottom edge */
+  left: 0;            /* Aligns perfectly to the left edge */
+  margin: 0;          /* Removes default browser spacing */
+}
 
 
 
