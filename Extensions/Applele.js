@@ -24,8 +24,8 @@
       };
     }
     apple() {
-      util.target.setSayText("applele")
-      alert("applele");
+      util.target.sprite.say("applele", util.target);
+    
     }
     report() {
       return true;
