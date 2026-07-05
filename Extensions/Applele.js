@@ -1,3 +1,5 @@
+(function(Scratch) {
+  'use strict';
 class Extension {
   getInfo() {
     return {
