@@ -76,7 +76,6 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-// Optional: search box wiring (add <input id="gallery-search"> if you want this)
 function wireSearch() {
   const input = document.getElementById("gallery-search");
   if (!input) return;
