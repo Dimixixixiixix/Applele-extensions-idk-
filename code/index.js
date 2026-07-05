@@ -32,12 +32,10 @@ function buildCard(ext) {
   const card = document.createElement("div");
   card.className = "extension-card";
 
-  const star = ext.featured ? `<span class="star">★</span>` : "";
-
   card.innerHTML = `
     <img class="extension-thumb" src="${escapeHtml(ext.image || "")}" alt="${escapeHtml(ext.name)} thumbnail" loading="lazy">
     <div class="extension-body">
-      <h2 class="extension-title">${escapeHtml(ext.name)} ${star}</h2>
+      <h2 class="extension-title">${escapeHtml(ext.name)}</h2>
       <p class="extension-desc">${escapeHtml(ext.description || "")}</p>
       <p class="extension-author">Created by
         ${ext.authorLink
@@ -45,26 +43,37 @@ function buildCard(ext) {
           : escapeHtml(ext.author || "Unknown")}.
       </p>
       <div class="extension-actions">
-        <button class="btn btn-copy" data-link="${escapeHtml(ext.link || "")}">Copy Link</button>
-        <button class="btn btn-try" data-link="${escapeHtml(ext.link || "")}">Try it out</button>
+        <button class="btn btn-download" data-link="${escapeHtml(ext.link || "")}" data-name="${escapeHtml(ext.name || "extension")}">Download</button>
       </div>
     </div>
   `;
 
-  card.querySelector(".btn-copy").addEventListener("click", (e) => {
-    const link = e.currentTarget.dataset.link;
-    navigator.clipboard.writeText(link).then(() => {
-      const btn = e.currentTarget;
-      const original = btn.textContent;
-      btn.textContent = "Copied!";
-      setTimeout(() => (btn.textContent = original), 1200);
-    });
-  });
-
-  card.querySelector(".btn-try").addEventListener("click", (e) => {
-    const link = e.currentTarget.dataset.link;
-    
-    window.open(`https://penguinmod.com/editor.html?extension=${encodeURIComponent(link)}`, "_blank");
+  card.querySelector(".btn-download").addEventListener("click", async (e) => {
+    const btn = e.currentTarget;
+    const link = btn.dataset.link;
+    const name = btn.dataset.name.replace(/[^a-z0-9_-]/gi, "_") + ".js";
+    const original = btn.textContent;
+    try {
+      btn.textContent = "Downloading...";
+      const res = await fetch(link);
+      if (!res.ok) throw new Error("Failed to fetch file");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      btn.textContent = "Downloaded!";
+    } catch (err) {
+      // Some hosts block cross-origin fetch; fall back to just opening the file
+      window.open(link, "_blank");
+      btn.textContent = original;
+    } finally {
+      setTimeout(() => (btn.textContent = original), 1500);
+    }
   });
 
   return card;
