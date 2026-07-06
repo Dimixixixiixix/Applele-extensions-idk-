@@ -2,7 +2,7 @@
   'use strict';
   class Extension {
     constructor() {
-      this.money = 0;
+      this.moneyValue = 0;
     }
     getInfo() {
       return {
@@ -10,7 +10,7 @@
         name: "Golden Applele Economy",
         color1: "#08cf08",
         color2: "#339e0d",
-        color3:  "#fff705",
+        color3: "#fff705",
         blocks: [
           {
             opcode: 'add',
@@ -19,34 +19,35 @@
             arguments: {
               MON: {
                 type: Scratch.ArgumentType.NUMBER
-                 }
-            },
-            {
-              opcode: 'money',
-              text: 'Money',
-              blockType: Scratch.BlockType.REPORTER,
-             },
-             {
-              opcode: 'sets',
-              text: 'Set [NUNB]',
-              blockType: Scratch.BlockType.COMMAND,
-              arguments: {
-                NUNB: {
-                  type: Scratch.ArgumentType.NUMBER
-                }
-             }
+              }
+            }
+          },
+          {
+            opcode: 'money',
+            text: 'Money',
+            blockType: Scratch.BlockType.REPORTER
+          },
+          {
+            opcode: 'sets',
+            text: 'Set [NUNB]',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              NUNB: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
           }
         ]
       };
     }
     add(args) {
-     this.money += Number(args.MON);
+      this.moneyValue += Number(args.MON);
     }
     money() {
-      return this.money
+      return this.moneyValue;
     }
     sets(args) {
-      this.money == Number(args.NUNB);
+      this.moneyValue = Number(args.NUNB);
     }
   }
   Scratch.extensions.register(new Extension());
