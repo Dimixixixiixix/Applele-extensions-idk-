@@ -7,5 +7,14 @@
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/Applele.js",
     "featured": true
+  },
+  {
+    "name": "Golden Applele Economy!",
+    "description": "Economy extension, based on the discord bot unbelievaboat.",
+    "image": "economy/applele.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/Applele.js",
+    "featured": true
   }
 ]
