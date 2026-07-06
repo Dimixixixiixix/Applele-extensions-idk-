@@ -9,6 +9,8 @@
       return {
         id: "mrcrabs",
         name: "Golden Applele Economy",
+        menuIconURI: blocksIcon,
+        blockIconURI: blocksIcon,
         color1: "#08cf08",
         color2: "#339e0d",
         color3: "#fff705",
