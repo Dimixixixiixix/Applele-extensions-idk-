@@ -146,7 +146,17 @@
           opcode: 'clearowned',
           text: 'clear owned',
           blockType: Scratch.BlockType.COMMAND
-        }
+        },
+        {
+          opcode: 'sellItem',
+          text: 'Sell item [SELLIN]',
+          blockType: Scratch.BlockType.COMMAND,
+          arguments: {
+            SELLIN: {
+              type: Scratch.ArgumentType.STRING,
+              }
+            }
+          }
         ]
       };
     }
@@ -208,6 +218,13 @@
     }
     clearowned() {
       this.owned = [];
+    }
+    sellItem(args) {
+      const index = this.owned.findIndex(i => i.name === args.SELLIN);
+      if (index === -1) return; 
+      const item = this.owned[index];
+      this.owned.splice(index, 1); 
+      this.moneyValue += item.price;
     }
   }
   Scratch.extensions.register(new Extension());
