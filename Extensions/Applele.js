@@ -1,4 +1,4 @@
-(function(Scratch) {
+(function(Scratch) { 
   'use strict';
   const blocksIcon = "https://cdn.phototourl.com/free/2026-07-05-db18e682-8ef5-4827-aee3-0030f7b5dad0.png";
   class Extension {
