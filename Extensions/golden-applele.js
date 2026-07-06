@@ -105,6 +105,19 @@
             blockType: Scratch.BlockType.REPORTER,
             disableMonitor: true,
             blockShape: Scratch.BlockShape.SQUARE
+          },
+          {
+            opcode: 'additem',
+            text: 'add item with name [NAMIT] and price [PRICE] to shop',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              NAMIT: {
+                type: Scratch.ArgumentType.STRING
+              },
+              PRICE: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
           }
         ]
       };
@@ -143,7 +156,13 @@
       this.moneyValue += Math.floor(Math.random() * 2001) - 1000;
     }
     shopit() {
-      return this.shop;
+      return JSON.stringify(this.shop);
+    }
+    additem(args) {
+      this.shop.push({
+        name: args.NAMIT,
+        price: Number(args.PRICE)
+      });
     }
   }
   Scratch.extensions.register(new Extension());
