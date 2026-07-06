@@ -7,9 +7,10 @@
     getInfo() {
       return {
         id: "mrcrabs",
-        name: "Money! Money!",
+        name: "Golden Applele Economy",
         color1: "#08cf08",
         color2: "#339e0d",
+        color3:  "#fff705",
         blocks: [
           {
             opcode: 'add',
