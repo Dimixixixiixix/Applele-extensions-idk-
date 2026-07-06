@@ -81,10 +81,15 @@
             }
           },
           {
-            text: 'Gaining Money :^:',
+            text: 'Gaining Money :^',
             // why would anyone even need this? idk man 😭 im still adding it tho
             // what the fuck why am i talking to myself
             blockType: Scratch.BlockType.LABEL
+          },
+          {
+            opcode: 'work',
+            text: 'work',
+            blockType: Scratch.BlockType.COMMAND,
           }
         ]
       };
@@ -115,6 +120,9 @@
         this.bankValue -= Number(args.WITHS);
         this.moneyValue += Number(args.WITHS);
       }
+    }
+    work() {
+      this.momeyValue += Math.floor(Math.random() * (100 - 1 + 1)) + 1;
     }
   }
   Scratch.extensions.register(new Extension());
