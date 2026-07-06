@@ -129,7 +129,14 @@
               type: Scratch.ArgumentType.STRING,
            }
           }
-         }
+         },
+        {
+          opcode: 'own',
+          text: 'owned items',
+          blockType: Scratch.BlockType.REPORTER,
+          disableMonitor: true,
+          blockShape: Scratch.BlockShape.SQUARE
+        }
         ]
       };
     }
@@ -177,12 +184,15 @@
     }
     buyItem(args) {
      const item = this.shop.find(i => i.name === args.ITEMNAME);
-     if (!item) return; 
+     if (!item) return; // item doesn't exist in shop
      if (item.price <= this.moneyValue) {
       this.moneyValue -= item.price;
       this.owned.push(item);
     }
    }
+     own() {
+      return JSON.stringify(this.owned);
+    }
   }
   Scratch.extensions.register(new Extension());
 })(Scratch);
