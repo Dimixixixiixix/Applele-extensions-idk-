@@ -1,4 +1,4 @@
-  (function(Scratch) {
+(function(Scratch) {
   'use strict';
   const blocksIcon = "https://i.postimg.cc/tTZRVXnj/Untitled-07-05-2026-11-18-50.png";
   class Extension {
@@ -67,11 +67,11 @@
             arguments: {
               DEPS: {
                 type: Scratch.ArgumentType.NUMBER
-                }
               }
+            }
           },
           {
-            opcode: 'with',
+            opcode: 'withd',
             text: 'withdraw [WITHS] money from bank to balance',
             blockType: Scratch.BlockType.COMMAND,
             arguments: {
@@ -80,7 +80,6 @@
               }
             }
           }
-          
         ]
       };
     }
@@ -103,10 +102,10 @@
       if (this.moneyValue > Number(args.DEPS) - 1) {
         this.moneyValue -= Number(args.DEPS);
         this.bankValue += Number(args.DEPS);
-        }
+      }
     }
-    with(args) {
-      if (this.bankValue > Number(args.WITHS) - 1 {
+    withd(args) {
+      if (this.bankValue > Number(args.WITHS) - 1) {
         this.bankValue -= Number(args.WITHS);
         this.moneyValue += Number(args.WITHS);
       }
