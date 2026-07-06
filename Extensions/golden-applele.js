@@ -1,4 +1,4 @@
-(function(Scratch) {
+  (function(Scratch) {
   'use strict';
   const blocksIcon = "https://i.postimg.cc/tTZRVXnj/Untitled-07-05-2026-11-18-50.png";
   class Extension {
@@ -90,7 +90,7 @@
       return this.bankValue;
     }
     dep(args) {
-      if (this.moneyValue > Number(args.DEPS)) {
+      if (this.moneyValue ≥ Number(args.DEPS)) {
         this.moneyValue -= Number(args.DEPS);
         this.bankValue += Number(args.DEPS);
         }
