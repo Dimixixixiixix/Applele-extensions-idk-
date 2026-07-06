@@ -177,7 +177,7 @@
     }
     buyItem(args) {
      const item = this.shop.find(i => i.name === args.ITEMNAME);
-     if (!item) return; // item doesn't exist in shop
+     if (!item) return; 
      if (item.price <= this.moneyValue) {
       this.moneyValue -= item.price;
       this.owned.push(item);
