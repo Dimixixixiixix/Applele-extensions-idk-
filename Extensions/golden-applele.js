@@ -122,7 +122,7 @@
       }
     }
     work() {
-      this.momeyValue += Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+      this.moneyValue += Math.floor(Math.random() * (100 - 1 + 1)) + 1;
     }
   }
   Scratch.extensions.register(new Extension());
