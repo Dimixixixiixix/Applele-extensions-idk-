@@ -6,6 +6,7 @@
       this.moneyValue = 0;
       this.bankValue = 0;
       this.shop = [];
+      this.owned = [];
     }
     getInfo() {
       return {
@@ -118,7 +119,17 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          {
+            opcode: 'buyItem',
+            text: 'Buy item [ITEMNAME]',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+             ITEMNAME: {
+              type: Scratch.ArgumentType.STRING,
+           }
           }
+         }
         ]
       };
     }
@@ -164,6 +175,14 @@
         price: Number(args.PRICE)
       });
     }
+    buyItem(args) {
+     const item = this.shop.find(i => i.name === args.ITEMNAME);
+     if (!item) return; // item doesn't exist in shop
+     if (item.price <= this.moneyValue) {
+      this.moneyValue -= item.price;
+      this.owned.push(item);
+    }
+   }
   }
   Scratch.extensions.register(new Extension());
 })(Scratch);
