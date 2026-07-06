@@ -4,6 +4,7 @@
   class Extension {
     constructor() {
       this.moneyValue = 0;
+      this.bankValue = 0;
     }
     getInfo() {
       return {
@@ -53,6 +54,11 @@
           {
             text: 'BANK blocks:',
             blockType: Scratch.BlockType.LABEL
+          },
+          {
+            opcode: 'banki',
+            text: 'Bank Money Deposited',
+            blockType: Scratch.BlockType.REPORTER
           }
         ]
       };
@@ -68,6 +74,9 @@
     }
     cenr(args) {
       this.moneyValue += Number(args.CENT) / 100;
+    }
+    banki() {
+      return this.bankValue;
     }
   }
   Scratch.extensions.register(new Extension());
