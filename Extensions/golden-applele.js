@@ -95,6 +95,10 @@
             opcode: 'crime',
             text: 'crime',
             blockType: Scratch.BlockType.COMMAND,
+          },
+          {
+            text: 'Shop Utilities',
+            blockType: Scratch.BlockType.LABEL
           }
         ]
       };
