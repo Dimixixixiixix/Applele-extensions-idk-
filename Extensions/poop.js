@@ -5,6 +5,9 @@
       return {
         id: "poopberr",
         name: "Poop",
+        color1: "#7d400e",
+        color2: "#5c300c",
+        color3: "#5c300c",
         blocks: [
           {
             opcode: 'spawn',
