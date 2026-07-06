@@ -1,6 +1,9 @@
 (function(Scratch) {
   'use strict';
   class Extension {
+    constructor() {
+      this.money = 0;
+    }
     getInfo() {
       return {
         id: "mrcrabs",
@@ -22,7 +25,7 @@
       };
     }
     add(args) {
-      console.log('Added ' + args.MON + ' money!');
+      this.money += arg.MON
     }
   }
   Scratch.extensions.register(new Extension());
