@@ -29,7 +29,7 @@
       };
     }
     add(args) {
-      this.money += arg.MON
+     this.money += Number(args.MON);
     }
     money() {
       return this.money
