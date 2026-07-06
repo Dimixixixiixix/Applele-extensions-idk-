@@ -79,6 +79,12 @@
                 type: Scratch.ArgumentType.NUMBER
               }
             }
+          },
+          {
+            text: 'Gaining Money :^:',
+            // why would anyone even need this? idk man 😭 im still adding it tho
+            // what the fuck why am i talking to myself
+            blockType: Scratch.BlockType.LABEL
           }
         ]
       };
