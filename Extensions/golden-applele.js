@@ -59,7 +59,18 @@
             opcode: 'banki',
             text: 'Bank Money Deposited',
             blockType: Scratch.BlockType.REPORTER
+          },
+          {
+            opcode: 'dep',
+            text: 'deposit [DEPS] money to bank',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              DEPS: {
+                type: Scratch.ArgumentType.NUMBER
+                }
+              }
           }
+          
         ]
       };
     }
@@ -77,6 +88,10 @@
     }
     banki() {
       return this.bankValue;
+    }
+    dep(args) {
+           this.moneyValue -= Number(args.DEPS);
+           this.bankValue += Number(args.DEPS);
     }
   }
   Scratch.extensions.register(new Extension());
