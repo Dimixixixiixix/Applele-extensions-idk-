@@ -3,25 +3,27 @@
   class Extension {
     getInfo() {
       return {
-        id: "poopberr",
-        name: "Poop",
-        color1: "#7d400e",
-        color2: "#5c300c",
-        color3: "#5c300c",
+        id: "mrcrabs",
+        name: "Money! Money!",
+        color1: "#08cf08",
+        color2: "#339e0d",
         blocks: [
           {
-            opcode: 'spawn',
-            text: 'Spawn poop',
-            blockType: Scratch.BlockType.COMMAND
+            opcode: 'add',
+            text: 'add [MON] money',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              MON: {
+                type: Scratch.ArgumentType.NUMBER
+              }
+            }
           }
         ]
       };
     }
-
-    spawn() {
-      console.log('Hello world!');
+    add(args) {
+      console.log('Added ' + args.MON + ' money!');
     }
   }
-
   Scratch.extensions.register(new Extension());
 })(Scratch);
