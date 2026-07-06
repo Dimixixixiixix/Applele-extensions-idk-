@@ -3,7 +3,7 @@
     "name": "Applele Blocks",
     "description": "Simple Applele Blocks.",
     "image": "banners/applele.png",
-    "author": "Dimix",
+    "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/Applele.js",
     "featured": true
