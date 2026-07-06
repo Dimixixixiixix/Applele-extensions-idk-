@@ -106,8 +106,10 @@
         }
     }
     with(args) {
-      this.bankValue -= Number(args.WITHS);
-      this.moneyValue += Number(args.WITHS);
+      if (this.bankValue > Number(args.WITHS) - 1 {
+        this.bankValue -= Number(args.WITHS);
+        this.moneyValue += Number(args.WITHS);
+      }
     }
   }
   Scratch.extensions.register(new Extension());
