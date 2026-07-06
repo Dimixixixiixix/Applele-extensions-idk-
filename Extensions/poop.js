@@ -18,14 +18,21 @@
             arguments: {
               MON: {
                 type: Scratch.ArgumentType.NUMBER
-              }
-            }
+                 }
+            },
+            {
+              opcode: 'money',
+              text: 'Money',
+              blockType: Scratch.BlockType.REPORTER,
           }
         ]
       };
     }
     add(args) {
       this.money += arg.MON
+    }
+    money() {
+      return this.money
     }
   }
   Scratch.extensions.register(new Extension());
