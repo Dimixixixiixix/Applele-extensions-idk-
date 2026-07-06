@@ -5,6 +5,7 @@
     constructor() {
       this.moneyValue = 0;
       this.bankValue = 0;
+      this.shop = [];
     }
     getInfo() {
       return {
@@ -99,6 +100,11 @@
           {
             text: 'Shop Utilities',
             blockType: Scratch.BlockType.LABEL
+          },
+          {
+            opcode: 'shopit',
+            text: 'shop items',
+            blockType: Scratch.BlockType.REPORTER,
           }
         ]
       };
@@ -135,6 +141,9 @@
     }
     crime() {
       this.moneyValue += Math.floor(Math.random() * 2001) - 1000;
+    }
+    shopit() {
+      return this.shop
     }
   }
   Scratch.extensions.register(new Extension());
