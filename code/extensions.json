@@ -25,5 +25,13 @@
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/Applele Runtime (EXTFORGE).js",
     "featured": false
-  }
+  },
+  {
+  "name": "Joeify",
+    "description": "Replaces all leters in the alphabet with the leters j, o and e.",
+    "image": "banners/joe.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/joe.js",
+    "featured": false
 ]
