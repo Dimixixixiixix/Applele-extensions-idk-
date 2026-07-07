@@ -39,44 +39,10 @@ function buildCard(ext) {
           : escapeHtml(ext.author || "Unknown")}.
       </p>
       <div class="extension-actions">
-        <button class="btn btn-try" data-link="${escapeHtml(ext.link || "")}">Copy URL</button>
         <button class="btn btn-download" data-link="${escapeHtml(ext.link || "")}" data-name="${escapeHtml(ext.name || "extension")}">Download</button>
       </div>
     </div>
   `;
-
-  card.querySelector(".btn-try").addEventListener("click", async (e) => {
-    const btn = e.currentTarget;
-    const rawLink = btn.dataset.link;
-    if (!rawLink) return;
-
-   p
-    const absoluteLink = new URL(rawLink, window.location.href).href;
-    const original = btn.textContent;
-
-    try {
-      await navigator.clipboard.writeText(absoluteLink);
-      btn.textContent = "Copied!";
-    } catch (err) {
-      const textarea = document.createElement("textarea");
-      textarea.value = absoluteLink;
-      textarea.style.position = "fixed";
-      textarea.style.opacity = "0";
-      document.body.appendChild(textarea);
-      textarea.select();
-      try {
-        document.execCommand("copy");
-        btn.textContent = "Copied!";
-      } catch (fallbackErr) {
-        btn.textContent = "Copy failed";
-      }
-      textarea.remove();
-    } finally {
-      setTimeout(function () {
-        btn.textContent = original;
-      }, 1500);
-    }
-  });
 
   card.querySelector(".btn-download").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
