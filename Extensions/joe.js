@@ -5,7 +5,7 @@
       return {
         id: "joe",
         name: "Joeify",
-        color1: #e9f542,
+        color1: "#e9f542",
         blocks: [
           {
             opcode: 'joes',
