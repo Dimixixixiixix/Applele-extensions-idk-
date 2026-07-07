@@ -7,7 +7,7 @@
         id: "joe",
         name: "Joeify",
         color1: "#bcbf0b",
-        blockIconUri: blocksIcon,
+        blockIconURI: blocksIcon,
         blocks: [
           {
             opcode: 'joes',
