@@ -146,3 +146,9 @@ body {
   padding: 60px 20px;
   font-size: 16px;
 }
+.btn-try {
+  background: #2a6fb0;
+}
+.btn-try:hover {
+  background: #1f5688;
+}
