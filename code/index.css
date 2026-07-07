@@ -17,8 +17,9 @@ body {
   color: gray;
   font-size: 10px;
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9990;
   margin: 0;
   font-family: arial;
 }
