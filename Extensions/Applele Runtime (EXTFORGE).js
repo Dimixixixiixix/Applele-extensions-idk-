@@ -1,7 +1,7 @@
 /*
    Created with ExtForge
    https://jwklong.github.io/extforge
-*/
+*/ 
 (async function(Scratch) {
     const variables = {};
 
