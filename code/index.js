@@ -74,7 +74,6 @@ function buildCard(ext) {
     }, 1500);
   }
 });
-
   card.querySelector(".btn-download").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
     const link = btn.dataset.link;
