@@ -1,12 +1,13 @@
 (function(Scratch) {
   'use strict';
+  const blocksIcon = "https://i.postimg.cc/7Lcv8D5f/IMG-6235.jpg";
   class Extension {
     getInfo() {
       return {
         id: "joe",
         name: "Joeify",
         color1: "#bcbf0b",
-        blockIconUri: "https://i.postimg.cc/7Lcv8D5f/IMG-6235.jpg",
+        blockIconUri: blocksIcon,
         blocks: [
           {
             opcode: 'joes',
