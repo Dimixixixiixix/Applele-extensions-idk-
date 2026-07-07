@@ -26,10 +26,10 @@
     joes(args) {
       const text = String(args.TXT);
       const replacementMap = {
-        'a': 'j', 'b': 'j', 'c': 'j', 'd': 'j', 'e': 'j', 'f': 'j', 'g': 'j', 'h': 'j',
-        'i': 'o', 'j': 'o', 'k': 'o', 'l': 'o', 'm': 'o', 'n': 'o', 'o': 'o', 'p': 'o',
-        'q': 'e', 'r': 'e', 's': 'e', 't': 'e', 'u': 'e', 'v': 'e', 'w': 'e', 'x': 'e',
-        'y': 'j', 'z': 'o',
+        'q': 'j', 'w': 'j', 'e': 'j', 'r': 'j', 't': 'j', 'y': 'j', 'u': 'j', 'i': 'j',
+        'o': 'o', 'p': 'o', 'a': 'o', 's': 'o', 'd': 'o', 'f': 'o', 'g': 'o', 'h': 'o',
+        'j': 'e', 'k': 'e', 'l': 'e', 'z': 'e', 'x': 'e', 'c': 'e', 'v': 'e', 'b': 'e',
+        'n': 'j', 'm': 'o',
       };
       const result = text.replace(/[a-zA-Z]/g, (matched) => {
         const lower = matched.toLowerCase();
