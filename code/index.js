@@ -46,34 +46,34 @@ function buildCard(ext) {
   `;
 
   card.querySelector(".btn-try").addEventListener("click", async (e) => {
-    const btn = e.currentTarget;
-    const link = btn.dataset.link;
-    if (!link) return;
-    const original = btn.textContent;
+  const btn = e.currentTarget;
+  const rawLink = btn.dataset.link;
+  if (!rawLink) return;
+  const link = new URL(rawLink, window.location.href).href;
+  const original = btn.textContent;
+  try {
+    await navigator.clipboard.writeText(link);
+    btn.textContent = "Copied!";
+  } catch (err) {
+    const textarea = document.createElement("textarea");
+    textarea.value = link;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
     try {
-      await navigator.clipboard.writeText(link);
+      document.execCommand("copy");
       btn.textContent = "Copied!";
-    } catch (err) {
-      // Fallback for browsers without Clipboard API support
-      const textarea = document.createElement("textarea");
-      textarea.value = link;
-      textarea.style.position = "fixed";
-      textarea.style.opacity = "0";
-      document.body.appendChild(textarea);
-      textarea.select();
-      try {
-        document.execCommand("copy");
-        btn.textContent = "Copied!";
-      } catch (fallbackErr) {
-        btn.textContent = "Copy failed";
-      }
-      textarea.remove();
-    } finally {
-      setTimeout(function () {
-        btn.textContent = original;
-      }, 1500);
+    } catch (fallbackErr) {
+      btn.textContent = "Copy failed";
     }
-  });
+    textarea.remove();
+  } finally {
+    setTimeout(function () {
+      btn.textContent = original;
+    }, 1500);
+  }
+});
 
   card.querySelector(".btn-download").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
