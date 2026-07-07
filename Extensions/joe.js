@@ -5,7 +5,8 @@
       return {
         id: "joe",
         name: "Joeify",
-        color1: "#e9f542",
+        color1: "#bcbf0b",
+        blockIconUri: "https://i.postimg.cc/7Lcv8D5f/IMG-6235.jpg",
         blocks: [
           {
             opcode: 'joes',
