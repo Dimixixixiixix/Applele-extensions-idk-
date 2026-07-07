@@ -6,7 +6,7 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/Applele.js",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Golden Applele Economy!",
@@ -15,6 +15,15 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/golden-applele.js",
-    "featured": true
+    "featured": false
+  },
+  {
+    "name": "Applele Runtime",
+    "description": "Simple runtime extension to change things (MADE WITH EXTFORGE, POSSIBLE LOW QUALITY EXTENSION).",
+    "image": "banners/runtime.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/Applele Runtime (MADE WITH EXTFORGE).js",
+    "featured": false
   }
 ]
