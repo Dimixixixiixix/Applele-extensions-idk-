@@ -44,6 +44,7 @@
     'France', 'Morocco', 'Spain', 'Belgium',
     'Norway', 'England', 'Argentina', 'Switzerland'
   ];
+  const blockIconURI = "https://i.postimg.cc/NFhHwmPK/Untitled-07-09-2026-06-31-22.png";
 
   class Extension {
     constructor() {
