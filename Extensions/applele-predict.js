@@ -55,6 +55,7 @@
       return {
         id: 'insertverycoolidhere',
         name: 'Applele Soccer Predictions',
+        blockIconURI: BlockIconURI,
         color1: '#323332',
         color2: '#ffffff',
         color3: '#ffffff',
