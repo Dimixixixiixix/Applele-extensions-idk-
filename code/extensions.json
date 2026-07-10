@@ -43,6 +43,16 @@
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/green-applele.js",
     "featured": true
+  },
+  {
+    "name": "Applele Soccer Predictions!",
+    "description": "Makes predictions for the world cup (you can add your own teams too! but by defualt the only teams with ratings by default are the teams that were in the world cup)",
+    "image": "banners/applele-predictions.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/applele-predict.js",
+    "featured": false
   }
+  
   
 ]
