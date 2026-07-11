@@ -40,7 +40,7 @@ function buildCard(ext) {
       </p>
       <div class="extension-actions">
         <button class="btn btn-download" data-link="${escapeHtml(ext.link || "")}" data-name="${escapeHtml(ext.name || "extension")}">Download</button>
-        <button class="btn btn-copy" data-link="${escapeHtml(ext.link || "")}">Copy Link</button>
+        <button class="btn btn-copy" data-copy="${escapeHtml(ext.copyLink || ext.link || "")}">Copy Link</button>
       </div>
     </div>
   `;
@@ -73,6 +73,36 @@ function buildCard(ext) {
     }
   });
 
+  card.querySelector(".btn-copy").addEventListener("click", async (e) => {
+    const btn = e.currentTarget;
+    const link = btn.dataset.copy;
+    const original = btn.textContent;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(link);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = link;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
+      btn.textContent = "Copied!";
+    } catch (err) {
+      btn.textContent = "Failed to copy";
+    } finally {
+      setTimeout(function () {
+        btn.textContent = original;
+      }, 1500);
+    }
+  });
+
+  return card;
+}
   card.querySelector(".btn-copy").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
     const link = btn.dataset.link;
