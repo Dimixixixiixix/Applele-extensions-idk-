@@ -152,3 +152,10 @@ body {
 .btn-try:hover {
   background: #1f5688;
 }
+.btn-copy {
+  background: #444;
+  color: #fff;
+}
+.btn-copy:hover {
+  background: #555;
+}
