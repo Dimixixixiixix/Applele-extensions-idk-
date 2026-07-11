@@ -3,7 +3,7 @@
 
   const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-  class GeminiAIExtension {
+  class Extension {
     constructor() {
       this.apiKey = '';
       this.model = 'gemini-2.5-flash';
@@ -192,5 +192,5 @@
     }
   }
 
-  Scratch.extensions.register(new GeminiAIExtension());
+  Scratch.extensions.register(new Extension());
 })(Scratch);
