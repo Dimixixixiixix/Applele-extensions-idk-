@@ -52,6 +52,15 @@
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/applele-predict.js",
     "featured": false
+  },
+  {
+    "name": "Applele Gemini",
+    "description": "Talk with AI using blocks!",
+    "image": "banners/Gemini.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/Gemini.js",
+    "featured": false
   }
   
   
