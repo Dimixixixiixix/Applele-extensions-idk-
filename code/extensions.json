@@ -37,6 +37,7 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/joe.js",
+    "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/joe.js",
     "featured": false
   },
   {
@@ -46,6 +47,7 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/green-applele.js",
+    "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/green-applele.js",
     "featured": true
   },
   {
@@ -55,6 +57,7 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/applele-predict.js",
+    "copyLink": "",
     "featured": false
   },
   {
@@ -64,6 +67,7 @@
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "Extensions/Gemini.js",
+    "copyLink": "",
     "featured": false
   }
   
