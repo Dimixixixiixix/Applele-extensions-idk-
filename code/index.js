@@ -99,9 +99,6 @@ function buildCard(ext) {
         btn.textContent = original;
       }, 1500);
     }
-  });
-
-  return card;
 }
   card.querySelector(".btn-copy").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
@@ -111,7 +108,6 @@ function buildCard(ext) {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(link);
       } else {
-        // Fallback for older/insecure contexts
         const textarea = document.createElement("textarea");
         textarea.value = link;
         textarea.style.position = "fixed";
