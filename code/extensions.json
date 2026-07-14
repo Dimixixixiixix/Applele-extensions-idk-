@@ -69,6 +69,16 @@
     "link": "Extensions/Gemini.js",
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/Gemini.js",
     "featured": false
+  },
+  {
+    "name": "Applele Translations",
+    "description": "Useful extension for translations or making your own language",
+    "image": "banners/tra.png",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/tra.js",
+    "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/tra.js",
+    "featured": false
   }
   
   
