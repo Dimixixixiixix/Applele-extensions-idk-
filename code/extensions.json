@@ -79,7 +79,16 @@
     "link": "Extensions/tra.js",
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/tra.js",
     "featured": false
-  }
-  
+  },
+  {
+    "name": "Applele Search",
+    "description": "VERY primitive search engine i made! Log in, make and read articles :>",
+    "image": "icons/applele.jpeg",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "https://applele-search.neocities.org",
+    "copyLink": "https://applele-search.neocities.org",
+    "featured": false
+  },
   
 ]
