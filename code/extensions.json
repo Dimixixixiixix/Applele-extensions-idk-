@@ -82,11 +82,21 @@
   },
   {
     "name": "Applele Search",
-    "description": "VERY primitive search engine i made! Log in, make and read articles :>",
+    "description": "VERY primitive forum/social media, Log in, make and read articles :>",
     "image": "icons/applele.jpeg",
     "author": "Dimix", 
     "authorLink": "https://github.com/Dimixixixiixix",
     "link": "https://dimixixixiixix.github.io/applele-search/#/articles/",
+    "copyLink": "https://dimixixixiixix.github.io/applele-search/#/articles/",
+    "featured": false
+  },
+  {
+    "name": "MEGA Operators!",
+    "description": "Extra math & strings operators for penguinmod",
+    "image": "banners/megaop.jpeg",
+    "author": "Dimix", 
+    "authorLink": "https://github.com/Dimixixixiixix",
+    "link": "Extensions/megaop.js",
     "copyLink": "https://dimixixixiixix.github.io/applele-search/#/articles/",
     "featured": false
   }
