@@ -9,11 +9,6 @@
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/Applele.js",
     "featured": false
   },
-  // deprecated extensions cuz they are not yummy yummy in my tummy
-  // Golden Applele Economy | cuz Green Applele Shops extension is way better and it does the job way better too
-  // Applele Soccer Predictions | worldcup ended long time ago so who cares, i should make a probabilities extension
-  // Applele Translations | its ass
-    
   {
     "name": "Applele Runtime",
     "description": "Simple runtime extension to change things (MADE WITH EXTFORGE, POSSIBLE LOW QUALITY EXTENSION).",
@@ -66,3 +61,9 @@
   }
   
 ]
+
+// deprecated extensions cuz they are not yummy yummy in my tummy
+  // Golden Applele Economy | cuz Green Applele Shops extension is way better and it does the job way better too
+  // Applele Soccer Predictions | worldcup ended long time ago so who cares, i should make a probabilities extension
+  // Applele Translations | its ass
+  // also if ur reading this have a nice day man
