@@ -9,17 +9,19 @@
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/Applele.js",
     "featured": false
   },
-  {
-    "name": "Golden Applele Economy!",
-    "description": "Economy extension, based on the discord bot unbelievaboat.",
-    "image": "banners/economy.png",
-    "author": "Dimix", 
-    "authorLink": "https://github.com/Dimixixixiixix",
-    "link": "Extensions/golden-applele.js",
-    "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/golden-applele.js",
-    "featured": false
+  // Deprecated |
+  //.           v
+  // {
+    // "name": "Golden Applele Economy!",
+    // "description": "Economy extension, based on the discord bot unbelievaboat.",
+    // "image": "banners/economy.png",
+    // "author": "Dimix", 
+    // "authorLink": "https://github.com/Dimixixixiixix",
+    // "link": "Extensions/golden-applele.js",
+    // "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/golden-applele.js",
+    // "featured": false
 
-  },
+  // },
   {
     "name": "Applele Runtime",
     "description": "Simple runtime extension to change things (MADE WITH EXTFORGE, POSSIBLE LOW QUALITY EXTENSION).",
@@ -50,16 +52,16 @@
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/green-applele.js",
     "featured": true
   },
-  {
-    "name": "Applele Soccer Predictions!",
-    "description": "Makes predictions for the world cup (you can add your own teams too! but by defualt the only teams with ratings by default are the teams that were in the world cup)",
-    "image": "banners/applele-predictions.png",
-    "author": "Dimix", 
-    "authorLink": "https://github.com/Dimixixixiixix",
-    "link": "Extensions/applele-predict.js",
-    "copyLink": "https://github.com/Dimixixixiixix/Applele-extensions-idk-/raw/refs/heads/main/Extensions/applele-predict.js",
-    "featured": false
-  },
+  // { 
+    // "name": "Applele Soccer Predictions!",
+    // "description": "Makes predictions for the world cup (you can add your own teams too! but by defualt the only teams with ratings by default are the teams that were in the world cup)",
+    // "image": "banners/applele-predictions.png",
+    // "author": "Dimix", 
+    // "authorLink": "https://github.com/Dimixixixiixix",
+    // "link": "Extensions/applele-predict.js",
+    // "copyLink": "https://github.com/Dimixixixiixix/Applele-extensions-idk-/raw/refs/heads/main/Extensions/applele-predict.js",
+    // "featured": false
+  // },
   {
     "name": "Applele Gemini",
     "description": "Talk with AI using blocks!",
@@ -70,26 +72,17 @@
     "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/Gemini.js",
     "featured": false
   },
-  {
-    "name": "Applele Translations",
-    "description": "Useful extension for translations or making your own language",
-    "image": "banners/tra.png",
-    "author": "Dimix", 
-    "authorLink": "https://github.com/Dimixixixiixix",
-    "link": "Extensions/tra.js",
-    "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/tra.js",
-    "featured": false
-  },
-  {
-    "name": "Applele Search",
-    "description": "VERY primitive forum/social media, Log in, make and read articles :>",
-    "image": "icons/applele.jpeg",
-    "author": "Dimix", 
-    "authorLink": "https://github.com/Dimixixixiixix",
-    "link": "https://dimixixixiixix.github.io/applele-search/#/articles/",
-    "copyLink": "https://dimixixixiixix.github.io/applele-search/#/articles/",
-    "featured": false
-  },
+  // deprecated too :<
+  // {
+    // "name": "Applele Translations",
+    // "description": "Useful extension for translations or making your own language",
+    // "image": "banners/tra.png",
+    // "author": "Dimix", 
+    // "authorLink": "https://github.com/Dimixixixiixix",
+    // "link": "Extensions/tra.js",
+    // "copyLink": "https://raw.githubusercontent.com/Dimixixixiixix/Applele-extensions-idk-/refs/heads/main/Extensions/tra.js",
+    // "featured": false
+  // },
   {
     "name": "MEGA Operators!",
     "description": "Extra math & strings operators for penguinmod",
